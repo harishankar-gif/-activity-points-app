@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/activity-points-app/static/css/main.f743e721.css",
-    "main.js": "/activity-points-app/static/js/main.39ac314e.js",
-    "index.html": "/activity-points-app/index.html",
-    "main.f743e721.css.map": "/activity-points-app/static/css/main.f743e721.css.map",
-    "main.39ac314e.js.map": "/activity-points-app/static/js/main.39ac314e.js.map"
+    "main.css": "/-activity-points-app/static/css/main.f743e721.css",
+    "main.js": "/-activity-points-app/static/js/main.39ac314e.js",
+    "index.html": "/-activity-points-app/index.html",
+    "main.f743e721.css.map": "/-activity-points-app/static/css/main.f743e721.css.map",
+    "main.39ac314e.js.map": "/-activity-points-app/static/js/main.39ac314e.js.map"
   },
   "entrypoints": [
     "static/css/main.f743e721.css",
