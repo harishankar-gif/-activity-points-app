@@ -1,0 +1,26 @@
+[
+  {
+    "uid": "21CS045",
+    "password": "pass123",
+    "name": "Ananya Rajan",
+    "department": "Computer Science & Engineering",
+    "semester": 5,
+    "targetPoints": 100
+  },
+  {
+    "uid": "21EC102",
+    "password": "pass456",
+    "name": "Vivek Menon",
+    "department": "Electronics & Communication",
+    "semester": 5,
+    "targetPoints": 100
+  },
+  {
+    "uid": "22ME018",
+    "password": "pass789",
+    "name": "Fathima Noor",
+    "department": "Mechanical Engineering",
+    "semester": 3,
+    "targetPoints": 80
+  }
+]

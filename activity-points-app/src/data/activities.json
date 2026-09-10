@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "studentUid": "21CS045",
+    "title": "National Level Hackathon – Smart India Hackathon",
+    "category": "technical",
+    "date": "2026-01-18",
+    "description": "Represented the college in the SIH internal round, building a prototype for smart waste management.",
+    "pointsClaimed": 15,
+    "pointsApproved": 15,
+    "status": "Approved"
+  },
+  {
+    "id": 2,
+    "studentUid": "21CS045",
+    "title": "NSS Blood Donation Camp",
+    "category": "social",
+    "date": "2026-02-02",
+    "description": "Volunteered as a coordinator for the campus blood donation camp organised with the Red Cross.",
+    "pointsClaimed": 10,
+    "pointsApproved": 8,
+    "status": "Approved"
+  },
+  {
+    "id": 3,
+    "studentUid": "21CS045",
+    "title": "Inter-Department Badminton Tournament",
+    "category": "sports",
+    "date": "2026-03-05",
+    "description": "Played in the doubles category, reached the semi-finals.",
+    "pointsClaimed": 8,
+    "pointsApproved": 0,
+    "status": "Pending"
+  },
+  {
+    "id": 4,
+    "studentUid": "21CS045",
+    "title": "Student Council – Cultural Secretary",
+    "category": "leadership",
+    "date": "2025-11-20",
+    "description": "Served as Cultural Secretary, organised three campus-wide events over the semester.",
+    "pointsClaimed": 10,
+    "pointsApproved": 10,
+    "status": "Approved"
+  },
+  {
+    "id": 5,
+    "studentUid": "21EC102",
+    "title": "IEEE Workshop on Embedded Systems",
+    "category": "technical",
+    "date": "2026-01-25",
+    "description": "Two-day certified workshop on ARM microcontroller programming.",
+    "pointsClaimed": 10,
+    "pointsApproved": 10,
+    "status": "Approved"
+  },
+  {
+    "id": 6,
+    "studentUid": "21EC102",
+    "title": "College Annual Day – Stage Play",
+    "category": "cultural",
+    "date": "2025-12-14",
+    "description": "Lead role in the departmental stage play performed at the annual day.",
+    "pointsClaimed": 8,
+    "pointsApproved": 5,
+    "status": "Rejected"
+  },
+  {
+    "id": 7,
+    "studentUid": "22ME018",
+    "title": "Startup Pitch Fest",
+    "category": "entrepreneurship",
+    "date": "2026-02-20",
+    "description": "Pitched a low-cost prosthetics idea at the college incubation cell's pitch fest.",
+    "pointsClaimed": 12,
+    "pointsApproved": 12,
+    "status": "Approved"
+  }
+]

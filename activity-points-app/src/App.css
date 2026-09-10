@@ -1,0 +1,663 @@
+:root {
+  --navy: #16213E;
+  --navy-deep: #0E1729;
+  --gold: #B8863B;
+  --gold-light: #D9B876;
+  --paper: #F7F4EA;
+  --paper-line: #DDD5C0;
+  --ink: #24262B;
+  --muted: #706C5C;
+  --approved: #3F6B4A;
+  --pending: #A6742D;
+  --rejected: #9B4636;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}
+
+/* ---------- Navbar ---------- */
+.navbar {
+  background: var(--navy);
+  color: var(--paper);
+  border-bottom: 3px solid var(--gold);
+}
+
+.navbar-inner {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.navbar-brand {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.navbar-brand span {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold-light);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: rgba(247, 244, 234, 0.75);
+  font-size: 14px;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.navbar-link:hover {
+  color: var(--paper);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.navbar-link.active {
+  color: var(--paper);
+  background: rgba(184, 134, 59, 0.25);
+}
+
+.navbar-signout {
+  background: none;
+  border: 1px solid rgba(247, 244, 234, 0.3);
+  color: var(--paper);
+  font-size: 13px;
+  padding: 7px 14px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.navbar-signout:hover {
+  border-color: var(--gold);
+  color: var(--gold-light);
+}
+
+/* ---------- Ledger sheet (shared card look) ---------- */
+.ledger-sheet {
+  background: #FFFDF7;
+  border: 1px solid var(--paper-line);
+  border-top: 4px solid var(--navy);
+  padding: 32px;
+}
+
+.ledger-sheet + .ledger-sheet {
+  margin-top: 24px;
+}
+
+.page-heading {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 6px;
+}
+
+.page-subheading {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 28px;
+}
+
+/* ---------- Login ---------- */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy-deep);
+  background-image: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  background: var(--paper);
+  border-top: 4px solid var(--gold);
+  padding: 40px 36px;
+}
+
+.login-seal {
+  width: 44px;
+  height: 44px;
+  border: 2px solid var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--gold);
+  margin: 0 auto 18px;
+  font-size: 17px;
+}
+
+.login-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  text-align: center;
+  color: var(--navy);
+  margin: 0 0 4px;
+}
+
+.login-sub {
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+  margin: 0 0 28px;
+}
+
+.field {
+  margin-bottom: 18px;
+}
+
+.field label {
+  display: block;
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--paper-line);
+  background: #fff;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  border-color: var(--gold);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: var(--font-body);
+}
+
+.btn-primary {
+  width: 100%;
+  background: var(--navy);
+  color: var(--paper);
+  border: none;
+  padding: 12px 16px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+}
+
+.btn-primary:hover {
+  background: var(--navy-deep);
+}
+
+.btn-secondary {
+  background: none;
+  border: 1px solid var(--paper-line);
+  color: var(--ink);
+  padding: 10px 16px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  border-color: var(--navy);
+}
+
+.error-text {
+  color: var(--rejected);
+  font-size: 13px;
+  margin: -8px 0 16px;
+}
+
+.login-hint {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--paper-line);
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.login-hint code {
+  font-family: var(--font-mono);
+  background: rgba(184, 134, 59, 0.1);
+  padding: 1px 5px;
+}
+
+/* ---------- Dashboard summary ---------- */
+.summary-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--paper-line);
+  padding-bottom: 20px;
+  margin-bottom: 24px;
+  gap: 8px;
+}
+
+.summary-name {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--navy);
+  margin: 0;
+}
+
+.summary-meta {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.summary-meta span + span::before {
+  content: "·";
+  margin: 0 8px;
+  color: var(--paper-line);
+}
+
+.summary-uid {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--gold);
+  background: rgba(184, 134, 59, 0.1);
+  padding: 4px 10px;
+}
+
+/* ---------- Points ledger tally ---------- */
+.tally-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--paper-line);
+}
+
+.tally-row:last-of-type {
+  border-bottom: none;
+}
+
+.tally-label {
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.tally-value {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.tally-value.gold { color: var(--gold); }
+.tally-value.navy { color: var(--navy); }
+.tally-value.approved { color: var(--approved); }
+
+.progress-track {
+  height: 8px;
+  background: var(--paper-line);
+  margin: 18px 0 6px;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--gold);
+}
+
+.progress-caption {
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------- Activity list ---------- */
+.activity-row {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 16px;
+  align-items: start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--paper-line);
+  text-decoration: none;
+  color: inherit;
+}
+
+.activity-row:last-child {
+  border-bottom: none;
+}
+
+.activity-row:hover .activity-title {
+  color: var(--gold);
+}
+
+.seal {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.seal.Approved { border-color: var(--approved); color: var(--approved); }
+.seal.Pending { border-color: var(--pending); color: var(--pending); }
+.seal.Rejected { border-color: var(--rejected); color: var(--rejected); }
+
+.activity-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 4px;
+}
+
+.activity-meta {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.activity-meta span + span::before {
+  content: "·";
+  margin: 0 6px;
+  color: var(--paper-line);
+}
+
+.activity-points {
+  text-align: right;
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+.activity-points .claimed {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+}
+
+.activity-points .approved-pts {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.category-tag {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 1px solid var(--paper-line);
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filter-chip {
+  border: 1px solid var(--paper-line);
+  background: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+  color: var(--muted);
+}
+
+.filter-chip.active {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--paper);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--muted);
+}
+
+.empty-state a {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+/* ---------- Add Activity form ---------- */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 20px;
+}
+
+.form-grid .field.full {
+  grid-column: 1 / -1;
+}
+
+.category-hint {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: -12px;
+  margin-bottom: 18px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.form-actions .btn-primary {
+  width: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.success-banner {
+  border-left: 3px solid var(--approved);
+  background: rgba(63, 107, 74, 0.08);
+  color: var(--approved);
+  padding: 12px 16px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Categories ---------- */
+.category-entry {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--paper-line);
+  display: grid;
+  grid-template-columns: 180px 1fr auto;
+  gap: 16px;
+  align-items: start;
+}
+
+.category-entry:last-child {
+  border-bottom: none;
+}
+
+.category-name {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--navy);
+}
+
+.category-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.category-cap {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--gold);
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* ---------- Profile ---------- */
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 32px;
+  margin-bottom: 8px;
+}
+
+.profile-field-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.profile-field-value {
+  font-size: 15.5px;
+  color: var(--ink);
+}
+
+.profile-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: var(--gold-light);
+  font-family: var(--font-display);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.section-divider {
+  margin: 28px 0 20px;
+  border: none;
+  border-top: 1px solid var(--paper-line);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  color: var(--navy);
+  margin: 0 0 14px;
+}
+
+/* ---------- Admin review ---------- */
+.admin-row {
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--paper-line);
+}
+
+.admin-row:last-child {
+  border-bottom: none;
+}
+
+.admin-desc {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.admin-row-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.admin-points-input {
+  width: 100px;
+  padding: 6px 8px;
+  border: 1px solid var(--paper-line);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  text-align: right;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-approve, .btn-reject {
+  border: none;
+  padding: 6px 14px;
+  font-size: 12.5px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-approve {
+  background: var(--approved);
+  color: #fff;
+}
+
+.btn-approve:hover {
+  background: #345a3d;
+}
+
+.btn-reject {
+  background: none;
+  border: 1px solid var(--rejected);
+  color: var(--rejected);
+}
+
+.btn-reject:hover {
+  background: rgba(155, 70, 54, 0.08);
+}
+
+@media (max-width: 640px) {
+  .admin-row { grid-template-columns: 1fr; }
+  .admin-row-side { align-items: flex-start; margin-top: 12px; }
+  .navbar-links { display: none; }
+  .form-grid { grid-template-columns: 1fr; }
+  .category-entry { grid-template-columns: 1fr; }
+  .category-cap { text-align: left; }
+  .profile-grid { grid-template-columns: 1fr; }
+  .activity-row { grid-template-columns: 22px 1fr; }
+  .activity-points { grid-column: 2; text-align: left; margin-top: 6px; }
+}
